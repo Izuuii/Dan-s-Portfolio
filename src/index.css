@@ -103,3 +103,51 @@ body {
   animation: marquee 20s linear infinite;
 }
 
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 20s linear infinite;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dot-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+.dot-pulse {
+  animation: dot-pulse 1.2s ease-in-out infinite;
+}
+
+.dot-delay-1 {
+  animation-delay: 0s;
+}
+.dot-delay-2 {
+  animation-delay: 0.3s;
+}
+.dot-delay-3 {
+  animation-delay: 0.5s;
+}
