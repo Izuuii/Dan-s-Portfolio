@@ -16,14 +16,14 @@ const Navbar = ({ active, onNavigate }) => {
                         key={nav.id}
                         onClick={() => onNavigate(nav.id)}
                         className={
-                            "ibm-plex-mono-regular min-w-[60px] sm:min-w-[100px] md:min-w-[140px] text-center text-base sm:text-lg md:text-2xl pt-1 pb-1 " +
+                            "ibm-plex-mono-regular min-w-[80px] sm:min-w-[100px] md:min-w-[140px] text-center text-base sm:text-lg md:text-1xl pt-1 pb-1 sm:pt-0.5 sm:pb-0.5" +
                             "transition-all duration-300 ease-in-out " +
                             (
                                 active === nav.id
                                     ? (
                                         nav.id === "home"
-                                            ? "text-gray-900 bg-white border-x-2 border-t-2 border-gray-300 shadow-none z-10 relative rounded-tr-2xl rounded-tl-none"
-                                            : "text-gray-900 bg-white border-x-2 border-t-2 border-gray-300 shadow-none z-10 relative rounded-t-2xl"
+                                            ? "text-[#333C4D] bg-white border-x-2 border-t-2 border-gray-300 shadow-none z-10 relative rounded-tr-xl rounded-tl-none"
+                                            : "text-[#333C4D] bg-white border-x-2 border-t-2 border-gray-300 shadow-none z-10 relative rounded-t-xl"
                                     )
                                     : "text-slate-300 border-0 rounded-t-2xl"
                             )
