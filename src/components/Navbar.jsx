@@ -1,43 +1,146 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-const NAVS = [
-    { label: "Home", id: "home" },
-    { label: "About", id: "about" },
-    { label: "Projects", id: "projects" },
-    { label: "Contact", id: "contact" },
+const navLinks = [
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "projects", label: "Projects" },
+    { id: "contact", label: "Contact" },
 ];
 
 const Navbar = ({ active, onNavigate }) => {
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            
+            // Set scrolled state for backdrop blur effect
+            setIsScrolled(currentScrollY > 20);
+            
+            // Auto-hide logic
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                // Scrolling down and past 100px - hide navbar
+                setIsVisible(false);
+            } else if (currentScrollY < lastScrollY || currentScrollY <= 100) {
+                // Scrolling up or at top of page - show navbar
+                setIsVisible(true);
+            }
+            
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [lastScrollY]);
+
+    const handleNavClick = (sectionId) => {
+        onNavigate(sectionId);
+        setIsMobileMenuOpen(false);
+    };
+
     return (
-        <nav className="sticky top-0 z-50 flex items-start pt-8 border-b-2 border-gray-300 bg-white backdrop-blur">
-            <div className="flex w-full justify-start">
-                {NAVS.map((nav) => (
+        <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 transform ${
+            isVisible ? "translate-y-0" : "-translate-y-full"
+        } ${
+            isScrolled 
+                ? "bg-gray-200/10 backdrop-blur-lg shadow-xl py-3" 
+                : "bg-transparent py-6"
+        }`}>
+            <div className="max-w-6xl mx-auto px-6">
+                <div className="flex justify-between items-center">
+                    
+                    {/* Brand/Logo */}
                     <button
-                        key={nav.id}
-                        onClick={() => onNavigate(nav.id)}
-                        className={
-                            "ibm-plex-mono-regular min-w-[80px] sm:min-w-[100px] md:min-w-[140px] text-center text-base sm:text-lg md:text-1xl pt-1 pb-1 sm:pt-0.5 sm:pb-0.5 " +
-                            "transition-all duration-300 ease-in-out transform hover:scale-105 hover:text-[#333C4D] " +
-                            (
-                                active === nav.id
-                                    ? (
-                                        nav.id === "home"
-                                            ? "text-[#333C4D] bg-white border-x-2 border-t-2 border-gray-300 shadow-none z-10 relative rounded-tr-xl rounded-tl-none"
-                                            : "text-[#333C4D] bg-white border-x-2 border-t-2 border-gray-300 shadow-none z-10 relative rounded-t-xl"
-                                    )
-                                    : "text-slate-300 border-0 rounded-t-2xl"
-                            )
-                        }
-                        style={
-                            active === nav.id
-                                ? { marginTop: "-24px", marginBottom: "-2px" }
-                                : { marginTop: "0px" }
-                        }
+                        onClick={() => handleNavClick("home")}
+                        className="text-2xl font-roboto font-bold text-white hover:text-green-400 transition-colors duration-300"
                     >
-                        {nav.label}
+                        <span className="font-roboto text-white">
+                            Dan.
+                        </span>
                     </button>
-                ))}
+
+                    {/* Desktop Navigation */}
+                    <div className="hidden md:flex items-center space-x-10">
+                        {navLinks.map((link) => (
+                            <button
+                                key={link.id}
+                                onClick={() => handleNavClick(link.id)}
+                                className={`relative text-medium font-roboto font-medium transition-all duration-300 group ${
+                                    active === link.id
+                                        ? "text-[#5AFF99]"
+                                        : "text-gray-300 hover:text-[#5AFF99]"
+                                }`}
+                            >
+                                {link.label}
+                            </button>
+                        ))}
+                        
+                        {/* Resume Button */}
+                        <button
+                            onClick={() => window.open('#', '_blank')}
+                            className="bg-[#5AFF99] hover:from-green-500 hover:to-black text-white px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                        >
+                            Resume
+                        </button>
+                    </div>
+
+                    {/* Mobile Menu Toggle */}
+                    <button
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        className="md:hidden p-2 text-white hover:text-[green-400 ]focus:outline-none"
+                        aria-label="Toggle menu"
+                    >
+                        <div className="w-6 h-6 flex flex-col justify-center items-center space-y-1">
+                            <span className={`block w-6 h-0.5 bg-current transition-transform duration-300 ${
+                                isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
+                            }`}></span>
+                            <span className={`block w-6 h-0.5 bg-current transition-opacity duration-300 ${
+                                isMobileMenuOpen ? "opacity-0" : "opacity-100"
+                            }`}></span>
+                            <span className={`block w-6 h-0.5 bg-current transition-transform duration-300 ${
+                                isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
+                            }`}></span>
+                        </div>
+                    </button>
+                </div>
+
+                {/* Mobile Menu */}
+                    <div className={`md:hidden transition-all duration-300 ${
+                        isMobileMenuOpen 
+                            ? "max-h-screen opacity-100 mt-6" 
+                            : "max-h-0 opacity-0 mt-0"
+                    } overflow-hidden overflow-y-auto`}>
+                    <div className="bg-gray-200/10 backdrop-blur-sm rounded-lg p-4 space-y-4">
+                        {navLinks.map((link) => (
+                            <button
+                                key={link.id}
+                                onClick={() => handleNavClick(link.id)}
+                                className={`block w-full text-left py-3 px-4 rounded-lg text-lg font-medium transition-all duration-200 ${
+                                    active === link.id
+                                        ? "text-[#5AFF99] bg-green-500/20"
+                                        : "text-white hover:text-green-400 hover:bg-white/10"
+                                }`}
+                            >
+                                {link.label}
+                            </button>
+                        ))}
+                        
+                        {/* Mobile Resume Button */}
+                        <button
+                            onClick={() => window.open('#', '_blank')}
+                            className="block w-full bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-white py-3 px-4 rounded-lg text-lg font-semibold transition-all duration-200 text-center"
+                        >
+                            Resume
+                        </button>
+                    </div>
+                </div>
             </div>
+
+            {/* Progress Bar */}
+            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-green-400 to-transparent opacity-20"></div>
         </nav>
     );
 };

@@ -4,93 +4,20 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
-.ibm-plex-mono-thin {
-  font-family: "IBM Plex Mono", monospace;
-
-
-}
-
-.ibm-plex-mono-extralight {
-  font-family: "IBM Plex Mono", monospace;
-
-
-}
-
-.ibm-plex-mono-light {
-  font-family: "IBM Plex Mono", monospace;
-
-
-}
-
-.ibm-plex-mono-regular {
-  font-family: "IBM Plex Mono", monospace;
-
-
-}
-
-.ibm-plex-mono-medium {
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 500;
+.roboto-<uniquifier> {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
   font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
-.ibm-plex-mono-semibold {
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 600;
-  font-style: normal;
-}
 
-.ibm-plex-mono-bold {
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.ibm-plex-mono-thin-italic {
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.ibm-plex-mono-extralight-italic {
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 200;
-  font-style: italic;
-}
-
-.ibm-plex-mono-light-italic {
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.ibm-plex-mono-regular-italic {
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.ibm-plex-mono-medium-italic {
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.ibm-plex-mono-semibold-italic {
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.ibm-plex-mono-bold-italic {
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 700;
-  font-style: italic;
-}
-
-@keyframes marquee {
+/* @keyframes marquee {
   0% {
     transform: translateX(0%);
   }
@@ -136,18 +63,5 @@ body {
     transform: scale(1.2);
     opacity: 0.7;
   }
-}
+} */
 
-.dot-pulse {
-  animation: dot-pulse 1.2s ease-in-out infinite;
-}
-
-.dot-delay-1 {
-  animation-delay: 0s;
-}
-.dot-delay-2 {
-  animation-delay: 0.3s;
-}
-.dot-delay-3 {
-  animation-delay: 0.5s;
-}

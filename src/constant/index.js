@@ -8,7 +8,7 @@ import react from "../assets/images/react-original.png";
 import tailwind from "../assets/images/tailwindcss-plain.png";
 import vscode from "../assets/images/vscode-original.png";
 import canva from "../assets/images/canva.png";
-import expressjs from "../assets/images/expressJS.png"
+import expressjs from "../assets/images/express-js.png"
 import firebase from "../assets/images/firebase.png"
 import mongoDB from "../assets/images/mongoDB.png"
 import nodeJS from "../assets/images/nodeJS.png"

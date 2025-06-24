@@ -5,7 +5,6 @@ import About from "../pages/About";
 import Projects from "../pages/Projects";
 import Contact from "../pages/Contact";
 
-
 const sectionsData = [
     { id: "home", label: "Home", content: <Home /> },
     { id: "about", label: "About", content: <About /> },
@@ -37,33 +36,32 @@ const HomePage = () => {
     }, []);
 
     const handleNavClick = (id) => {
-    if (id === "home") {
-        // Smooth scroll to the very top
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-        const ref = sectionRefs.current[id];
-        if (ref) {
-        ref.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (id === "home") {
+            // Smooth scroll to the very top
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        } else {
+            const ref = sectionRefs.current[id];
+            if (ref) {
+                ref.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
         }
-    }
     };
 
-
     return (
-        <div>
+        <div className="bg-gradient-to-b from-green-950 to-green-600 min-h-screen text-white">
             <Navbar active={active} onNavigate={handleNavClick} />
-                <div>
-                    {sectionsData.map((section) => (
-                        <section
-                            key={section.id}
-                            id={section.id}
-                            ref={(el) => (sectionRefs.current[section.id] = el)}
-                            className="py-8 text-center min-h-screen flex flex-col justify-center"
-                        >
-                            {section.content}
-                        </section>
-                    ))}
-                </div>
+            <div>
+                {sectionsData.map((section) => (
+                    <section
+                        key={section.id}
+                        id={section.id}
+                        ref={(el) => (sectionRefs.current[section.id] = el)}
+                        className="min-h-screen w-full"
+                    >
+                        {section.content}
+                    </section>
+                ))}
+            </div>
         </div>
     );
 };
