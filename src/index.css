@@ -4,20 +4,11 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
-}
-
-.roboto-<uniquifier> {
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-family: 'Roboto', 'Poppins', sans-serif;
 }
 
 
-/* @keyframes marquee {
+  @keyframes marquee {
   0% {
     transform: translateX(0%);
   }
@@ -38,30 +29,4 @@ body {
     transform: translateX(0%);
   }
 }
-
-.animate-marquee-reverse {
-  animation: marquee-reverse 20s linear infinite;
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes dot-pulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 0.7;
-  }
-} */
 

@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 
 const navLinks = [
     { id: "home", label: "Home" },
-    { id: "about", label: "About" },
     { id: "projects", label: "Projects" },
+    { id: "about", label: "About" },
     { id: "contact", label: "Contact" },
 ];
 
@@ -55,7 +55,7 @@ const Navbar = ({ active, onNavigate }) => {
                     {/* Brand/Logo */}
                     <button
                         onClick={() => handleNavClick("home")}
-                        className="text-2xl font-roboto font-bold text-white hover:text-green-400 transition-colors duration-300"
+                        className="text-2xl font-roboto font-bold text-white hover:text-green-400 transition-colors duration-300 " style={{ fontFamily: 'Poppins, sans-serif' }}
                     >
                         <span className="font-roboto text-white">
                             Dan.
@@ -63,12 +63,12 @@ const Navbar = ({ active, onNavigate }) => {
                     </button>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center space-x-10">
+                    <div className="hidden md:flex items-center space-x-10" style={{ fontFamily: 'Poppins, sans-serif' }}>
                         {navLinks.map((link) => (
                             <button
                                 key={link.id}
                                 onClick={() => handleNavClick(link.id)}
-                                className={`relative text-medium font-roboto font-medium transition-all duration-300 group ${
+                                className={`relative text-medium transition-all duration-300 group ${
                                     active === link.id
                                         ? "text-[#5AFF99]"
                                         : "text-gray-300 hover:text-[#5AFF99]"
@@ -80,10 +80,11 @@ const Navbar = ({ active, onNavigate }) => {
                         
                         {/* Resume Button */}
                         <button
-                            onClick={() => window.open('#', '_blank')}
-                            className="bg-[#5AFF99] hover:from-green-500 hover:to-black text-white px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                        onClick={() => window.open('#', '_blank')}
+                        className="bg-[#1D1F1E] text-white px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl hover:bg-[#5AFF99]"
+                        style={{ fontFamily: 'Poppins, sans-serif' }}
                         >
-                            Resume
+                        Resume
                         </button>
                     </div>
 

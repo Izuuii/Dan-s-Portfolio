@@ -4,11 +4,14 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Projects from "../pages/Projects";
 import Contact from "../pages/Contact";
+import Info from "../pages/Info";
+
 
 const sectionsData = [
     { id: "home", label: "Home", content: <Home /> },
-    { id: "about", label: "About", content: <About /> },
+    { id: "info", label: "Info", content: <Info /> },
     { id: "projects", label: "Projects", content: <Projects /> },
+    { id: "about", label: "About", content: <About /> },
     { id: "contact", label: "Contact", content: <Contact /> },
 ];
 
@@ -48,7 +51,7 @@ const HomePage = () => {
     };
 
     return (
-        <div className="bg-gradient-to-b from-green-950 to-green-600 min-h-screen text-white">
+        <div className="bg-[#121212] min-h-screen text-white">
             <Navbar active={active} onNavigate={handleNavClick} />
             <div>
                 {sectionsData.map((section) => (
