@@ -1,6 +1,7 @@
 import React from 'react';
 import AnimatedBackground from '../components/AnimatedBackground';
-import { techIcons } from "../constant";
+import star from "../assets/images/star.png";
+import { greetings } from "../constant";    
 
 function Home() {
     return (
@@ -48,22 +49,31 @@ function Home() {
                 />
             </div>
 
-            {/* Optional: Marquee Icons */}
-            <div className="w-screen overflow-hidden mt-2 px-2 bg-[#5AFF99] relative"> {/* Added bg-[#5AFF99] and relative */}
-            <div className="animate-marquee flex whitespace-nowrap py-4 sm:py-7 gap-10 sm:gap-16 md:gap-25 items-center">
-                {techIcons.concat(techIcons).map((icon, idx) => (
-                <img
-                    key={idx}
-                    src={icon.imgUrl}
-                    alt={`tech-${idx}`}
-                    className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 object-contain"
-                />
+            {/* Marquee Section */}
+            <div className="w-screen overflow-hidden mt-2 bg-[#5AFF99] relative text-black">
+                <div className="animate-marquee flex whitespace-nowrap py-4 sm:py-7 gap-10 sm:gap-16 md:gap-20 items-center">
+                {[...Array(2)].map((_, i) => (
+                    <div key={i} className="flex items-center">
+                    {greetings.map((text, idx) => (
+                        <React.Fragment key={`${i}-${idx}`}>
+                        <span className="text-xl sm:text-2xl font-medium mx-3 whitespace-nowrap">
+                            {text}
+                        </span>
+                        {idx !== greetings.length - 1 && (
+                            <img
+                            src={star}
+                            alt="star"
+                            className="w-10 h-10 sm:w-12 sm:h-12 md:w-15 md:h-15 mx-2"
+                            />
+                        )}
+                        </React.Fragment>
+                    ))}
+                    </div>
                 ))}
-            </div>
-            {/* Left Fade Overlay */}
-            <div className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#5AFF99] to-transparent"></div>
-            {/* Right Fade Overlay */}
-            <div className="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#5AFF99] to-transparent"></div>
+                </div>
+
+                <div className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#5AFF99] to-transparent pointer-events-none" />
+                <div className="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#5AFF99] to-transparent pointer-events-none" />
             </div>
         </div>
     );
