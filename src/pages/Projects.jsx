@@ -1,5 +1,5 @@
 const Projects = () => (
-    <div className="text-center w-full">
+    <div className="text-center min-h-screen w-full">
         <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white">Projects</h2>
         <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

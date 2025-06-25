@@ -1,5 +1,5 @@
 const Contact = () => (
-    <div className="text-center w-full">
+    <div className="text-center min-h-screen w-full">
         <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white">Contact Me</h2>
         <div className="max-w-2xl mx-auto">
             <p className="text-lg sm:text-xl text-green-100 mb-8">

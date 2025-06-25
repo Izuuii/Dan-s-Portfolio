@@ -1,6 +1,6 @@
 // About.jsx
 const About = () => (
-    <div className="text-center w-full bg-[#121212] pt-10 py-30">
+    <div className="text-center min-h-screen w-full bg-[#121212] pt-10 py-30">
         <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white">About Me</h2>
         <div className="max-w-3xl mx-auto">
             <p className="text-lg sm:text-xl text-green-100 leading-relaxed mb-6">
