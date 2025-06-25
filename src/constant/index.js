@@ -49,22 +49,22 @@
 
 export const greetings = [
   
-  "User Research",
+  "Responsiveness",
   "Brainstorming",
   "Ideation",
-  "Wireframe",
+  "Solution",
   "User Interface",
   "Micro Interaction",
-  "User Research",
+  "Responsiveness",
   "Brainstorming",
   "Ideation",
-  "Wireframe",
+  "Solution",
   "User Interface",
   "Micro Interaction",
-  "User Research",
+  "Responsiveness",
   "Brainstorming",
   "Ideation",
-  "Wireframe",
+  "Solution",
   "User Interface",
   "Micro Interaction",
 ];
