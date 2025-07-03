@@ -4,7 +4,7 @@ import { greetings } from "../constant";
 
 const Info = () => {
     return (
-        <div className="relative w-full bg-gradient-to-b from-[#0A1D16] to-[#121212] overflow-hidden pt-24 pb-16">
+        <div className="relative w-full bg-gradient-to-b from-[#0A1D16] to-[#121212] overflow-hidden pt-24 pb-8">
 
             {/* ⬆ Absolute Marquee at Top */}
             <div className="absolute top-0 left-0 w-full overflow-hidden bg-[#5AFF99] text-black z-10">

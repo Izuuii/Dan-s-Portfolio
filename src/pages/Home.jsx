@@ -4,7 +4,16 @@ import AnimatedBackground from '../components/AnimatedBackground';
 function Home() {
     return (
         <div className="relative w-full min-h-screen bg-gradient-to-b from-[#121212] to-[#1A2920] overflow-hidden">
-            <AnimatedBackground />
+            <AnimatedBackground
+            particleColors={['#ffffff', '#ffffff']}
+            particleCount={350}
+            particleSpread={15}
+            speed={0.1}
+            particleBaseSize={80}
+            moveParticlesOnHover={true}
+            alphaParticles={true}
+            disableRotation={true}
+            />
 
         {/* Responsive Content Section */}
         <div className="relative z-20 flex items-center justify-center min-h-screen px-10 sm:px-20 md:px-30">
