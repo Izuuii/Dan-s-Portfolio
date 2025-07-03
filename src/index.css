@@ -8,7 +8,7 @@ body {
 }
 
 
-  @keyframes marquee {
+@keyframes marquee {
   0% {
     transform: translateX(0%);
   }
@@ -18,10 +18,17 @@ body {
 }
 
 .animate-marquee {
-  animation: marquee 20s linear infinite;
+  animation: marquee 20s linear infinite; /* Default for larger screens */
 }
 
-@keyframes marquee-reverse {
+/* For small screens (sm breakpoint and below) */
+@media (max-width: 639px) { /* Tailwind's 'sm' breakpoint is 640px, so max-width: 639px covers small screens */
+  .animate-marquee {
+    animation: marquee 5s linear infinite; /* Faster animation for small screens */
+  }
+}
+
+@keyframes marquee {
   0% {
     transform: translateX(-50%);
   }
@@ -29,4 +36,3 @@ body {
     transform: translateX(0%);
   }
 }
-
