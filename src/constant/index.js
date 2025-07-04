@@ -103,7 +103,7 @@ export const PROJECTS = [
       AIchatbot,
     imageAlt: "AI Chatbot Screenshot",
     buttonText: "View Website",
-    buttonLink: "#",
+    buttonLink: "https://react-ai-chatbot-k7ci.vercel.app",
     buttonDisabled: false, // <--- add this
   },
     {
@@ -118,7 +118,7 @@ export const PROJECTS = [
       PitchClone,
     imageAlt: "PitchClone Screenshot",
     buttonText: "View Website",
-    buttonLink: "#",
+    buttonLink: "https://pitch-clone.vercel.app",
     buttonDisabled: false, // <--- add this
   },
   // Add more project objects here as needed

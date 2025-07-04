@@ -13,7 +13,7 @@ const ProjectCard = ({
     techStack, 
     buttonDisabled,
 }) => (
-    <div className="flex flex-col lg:flex-row bg-[#18191A] rounded-3xl px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-8 gap-6 md:gap-10 lg:gap-12 items-center mb-12 max-w-6xl mx-auto min-h-[400px]">
+    <div className="flex flex-col lg:flex-row bg-[#18191A] rounded-3xl px-4 py-4 md:px-4 md:py-4 gap-6 md:gap-10 lg:gap-12 items-center mb-12 max-w-6xl mx-auto min-h-[400px]">
         {/* Image */}
         <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end mb-2 lg:mb-0 order-1 lg:order-2 h-[320px] lg:h-[440px]">
             {image && (
