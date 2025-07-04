@@ -6,7 +6,7 @@ import { techIcons } from "../constant";
 
 const About = () => (
     <div className="min-h-screen w-full bg-[#121212] py-16">
-        <div className="max-w-5xl mx-auto px-4 py-4 sm:px-6 sm:py-5 md:px-10 md:py-8">
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 md:px-10 py-4 sm:py-5 md:py-8">
             <h3 className="text-green-400 text-center text-md font-bold mb-2 tracking-widest">ABOUT ME</h3>
             <h2 className="text-center text-4xl sm:text-5xl font-bold mb-10 text-white">Get To Know Me</h2>
             <div className="grid grid-cols-1 md:grid-cols-5 grid-rows-[auto] gap-4 mb-10">
@@ -29,31 +29,7 @@ const About = () => (
                         I’m always eager to learn new tools and frameworks, solve problems, and collaborate with others to deliver great digital experiences.
                     </p>
                 </div>
-                {/* Education
-                <div className="md:col-span-3 md:row-span-2 md:row-start-3 bg-[#18191A] rounded-xl p-6">
-                    <h4 className="text-white font-semibold mb-4">Education</h4>
-                    <div className="mb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                        <div>
-                            <p className="text-white font-bold">UI/UX Bootcamp</p>
-                            <p className="text-gray-400 text-sm">Designboat UI UX School • Bangalore</p>
-                        </div>
-                        <span className="text-gray-400 text-xs sm:ml-4">Aug 2021 – Feb 2022</span>
-                    </div>
-                    <div className="mb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                        <div>
-                            <p className="text-white font-bold">MCA</p>
-                            <p className="text-gray-400 text-sm">Chandigarh University • Distance Education</p>
-                        </div>
-                        <span className="text-gray-400 text-xs sm:ml-4">June 2022 – June 2024</span>
-                    </div>
-                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                        <div>
-                            <p className="text-white font-bold">B.Sc Computer Science</p>
-                            <p className="text-gray-400 text-sm">North Maharashtra University • Jalgaon</p>
-                        </div>
-                        <span className="text-gray-400 text-xs sm:ml-4">June 2018 – Apr 2021</span>
-                    </div>
-                </div> */}
+
                 {/* Education */}
                 <div className="md:col-span-3 md:row-span-2 md:row-start-3 bg-[#18191A] rounded-xl p-6">
                     <h4 className="text-white font-semibold mb-4">Education</h4>
