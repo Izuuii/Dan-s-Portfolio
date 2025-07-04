@@ -4,7 +4,7 @@ const navLinks = [
     { id: "home", label: "Home" },
     { id: "projects", label: "Projects" },
     { id: "about", label: "About" },
-    { id: "contact", label: "Contact" },
+    // { id: "contact", label: "Contact" },
 ];
 
 const Navbar = ({ active, onNavigate }) => {

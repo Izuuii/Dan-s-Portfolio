@@ -4,14 +4,14 @@ import Home from "./pages/Home";
 import Info from "./pages/Info";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
+// import Contact from "./pages/Contact";
 
 const sectionsData = [
   { id: "home", label: "Home", content: <Home /> },
   { id: "info", label: "Info", content: <Info /> },
   { id: "projects", label: "Projects", content: <Projects /> },
   { id: "about", label: "About", content: <About /> },
-  { id: "contact", label: "Contact", content: <Contact /> },
+  // { id: "contact", label: "Contact", content: <Contact /> },
 ];
 
 function App() {
