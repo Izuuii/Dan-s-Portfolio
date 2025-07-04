@@ -10,6 +10,8 @@ const ProjectCard = ({
     imageAlt,
     buttonText,
     buttonLink,
+    techStack, 
+    buttonDisabled,
 }) => (
     <div className="flex flex-col lg:flex-row bg-[#18191A] rounded-3xl px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-8 gap-6 md:gap-10 lg:gap-12 items-center mb-12 max-w-6xl mx-auto min-h-[400px]">
         {/* Image */}
@@ -44,15 +46,35 @@ const ProjectCard = ({
                 {title}
             </h2>
             <p className="text-gray-400 text-base sm:text-md mb-6">{description}</p>
-            {buttonText && buttonLink && (
-                <a
-                    href={buttonLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-[#232323] text-white font-semibold px-6 py-2 rounded-full hover:bg-[#333] transition"
-                >
-                    {buttonText}
-                </a>
+            {/* Tech Stack */}
+            {techStack && techStack.length > 0 && (
+                <div className="flex flex-wrap gap-2 mb-6">
+                    {techStack.map((tech, idx) => (
+                        <span
+                            key={idx}
+                            className="bg-[#232323] text-white text-xs px-3 py-1 rounded-full"
+                        >
+                            {tech}
+                        </span>
+                    ))}
+                </div>
+            )}
+            {buttonText && (
+            <a
+                href={buttonDisabled ? undefined : buttonLink}
+                target={buttonDisabled ? undefined : "_blank"}
+                rel={buttonDisabled ? undefined : "noopener noreferrer"}
+                className={`font-semibold px-6 py-2 rounded-full transition shadow
+                ${buttonDisabled
+                    ? "bg-gray-700 text-gray-400 cursor-not-allowed"
+                    : "bg-[#232323] text-white hover:bg-[#333]"}
+                `}
+                style={buttonDisabled ? { pointerEvents: "none" } : {}}
+                tabIndex={buttonDisabled ? -1 : 0}
+                aria-disabled={buttonDisabled ? "true" : "false"}
+            >
+                {buttonText}
+            </a>
             )}
         </div>
     </div>

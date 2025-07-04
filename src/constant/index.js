@@ -81,6 +81,7 @@ export const PROJECTS = [
     logoAlt: "BeeMo Logo",
     logoText: "BeeMo",
     title: "BeeMo: An IoT-Enabled Web-Based Stingless Beehive Management System with Real-Time Temperature, Humidity, Weight Monitoring",
+    techStack: ["HTML", "CSS", "Bootstrap", "JavaScript", "PHP", "MySQL", "IoT"],
     description:
       "BeeMo is an IoT-enabled web system that continuously monitors temperature, humidity, and weight inside stingless beehives. It provides real-time data, automatic alerts, and analytics to help beekeepers maintain optimal hive conditions and improve honey yields.",
     image:
@@ -88,12 +89,14 @@ export const PROJECTS = [
     imageAlt: "BeeMo Screenshot",
     buttonText: "View Website",
     buttonLink: "#",
+    buttonDisabled: true, // <--- add this
   },
     {
     logo: chatbotLogo,
     logoAlt: "Chatbot Logo",
     logoText: "AI Chatbot",
     title: " AI Chatbot Built with ChatGPT, Gemini, Deepseek ",
+    techStack: ["React", "Tailwind CSS", "FlowBite", "APIs"],
     description:
       "An advanced AI chatbot that integrates ChatGPT, Gemini, and Deepseek to deliver intelligent, context-aware conversations. It assists users with real-time answers, creative support, and task automation, providing a smooth and engaging experience across multiple domains.",
     image:
@@ -101,12 +104,14 @@ export const PROJECTS = [
     imageAlt: "AI Chatbot Screenshot",
     buttonText: "View Website",
     buttonLink: "#",
+    buttonDisabled: false, // <--- add this
   },
     {
     logo: PitchLogo,
     logoAlt: "Pitch Logo",
     logoText: "",
     title: "Pitch Clone Website",
+    techStack: ["React", "Tailwind CSS"],
     description:
       "A responsive clone of the Pitch website built with React and Tailwind CSS. This project was created to practice modern layouts, component structures, and adaptive design techniques while improving skills in building clean, professional interfaces.",
     image:
@@ -114,6 +119,7 @@ export const PROJECTS = [
     imageAlt: "PitchClone Screenshot",
     buttonText: "View Website",
     buttonLink: "#",
+    buttonDisabled: false, // <--- add this
   },
   // Add more project objects here as needed
 ];
