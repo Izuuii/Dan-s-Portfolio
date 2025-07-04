@@ -12,6 +12,7 @@ const ProjectCard = ({
     buttonLink,
     techStack, 
     buttonDisabled,
+    role,
 }) => (
     <div className="flex flex-col lg:flex-row bg-[#18191A] rounded-3xl px-4 py-4 md:px-4 md:py-4 gap-6 md:gap-10 lg:gap-12 items-center mb-12 max-w-6xl mx-auto min-h-[400px]">
         {/* Image */}
@@ -45,6 +46,9 @@ const ProjectCard = ({
             <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-4">
                 {title}
             </h2>
+            {role && (
+            <span className="text-green-400 text-xs font-semibold mb-2">{role}</span>
+            )}
             <p className="text-gray-400 text-base sm:text-md mb-6">{description}</p>
             {/* Tech Stack */}
             {techStack && techStack.length > 0 && (
