@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Info from "./pages/Info";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
+import Footer from "./components/Footer";
 // import Contact from "./pages/Contact";
 
 const sectionsData = [
@@ -63,6 +64,7 @@ function App() {
           </section>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

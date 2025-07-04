@@ -26,7 +26,7 @@ const ProjectCard = ({
         </div>
 
         {/* Text */}
-        <div className="w-full lg:w-1/2 flex flex-col items-start justify-center order-2 lg:order-1 h-full">
+        <div className="w-full lg:w-1/2 flex flex-col items-start justify-center order-2 lg:order-1 h-full pl-0 md:pl-4 lg:pl-8 pr-0 md:pr-4">
             {/* Logo and text beside it, only on lg+ */}
             {logo && (
                 <div className="flex items-center mb-4 hidden lg:flex">
