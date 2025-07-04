@@ -1,6 +1,6 @@
 import React from "react";
 import certicode from "../assets/AboutImage/CerticodeLogo.png"; 
-import profile from '../assets/AboutImage/profile.png';
+import profile from '../assets/AboutImage/profile.jpg';
 import { techIcons } from "../constant";
 
 
@@ -15,7 +15,7 @@ const About = () => (
                     <img
                         src={profile}
                         alt="Profile"
-                        className="rounded-lg w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 object-cover"
+                        className="rounded-lg w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 object-cover"
                     />
                 </div>
                 {/* Background */}
