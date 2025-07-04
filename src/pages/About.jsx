@@ -6,7 +6,7 @@ import { techIcons } from "../constant";
 
 const About = () => (
     <div className="min-h-screen w-full bg-[#121212] py-16">
-        <div className="max-w-5xl mx-auto px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-8">
+        <div className="max-w-5xl mx-auto px-4 py-4 sm:px-6 sm:py-5 md:px-10 md:py-8">
             <h3 className="text-green-400 text-center text-md font-bold mb-2 tracking-widest">ABOUT ME</h3>
             <h2 className="text-center text-4xl sm:text-5xl font-bold mb-10 text-white">Get To Know Me</h2>
             <div className="grid grid-cols-1 md:grid-cols-5 grid-rows-[auto] gap-4 mb-10">

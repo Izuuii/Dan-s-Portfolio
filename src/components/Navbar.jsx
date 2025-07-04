@@ -17,19 +17,12 @@ const Navbar = ({ active, onNavigate }) => {
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
-            
-            // Set scrolled state for backdrop blur effect
             setIsScrolled(currentScrollY > 20);
-            
-            // Auto-hide logic
             if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                // Scrolling down and past 100px - hide navbar
                 setIsVisible(false);
             } else if (currentScrollY < lastScrollY || currentScrollY <= 100) {
-                // Scrolling up or at top of page - show navbar
                 setIsVisible(true);
             }
-            
             setLastScrollY(currentScrollY);
         };
 
@@ -50,7 +43,7 @@ const Navbar = ({ active, onNavigate }) => {
                 ? "bg-gray-200/10 backdrop-blur-lg shadow-xl py-3" 
                 : "bg-transparent py-6"
         }`}>
-            <div className="max-w-6xl mx-auto px-6">
+            <div className="max-w-6xl mx-auto px-5 sm:px-6 md:px-10">
                 <div className="flex justify-between items-center">
                     
                     {/* Brand/Logo */}
@@ -64,7 +57,7 @@ const Navbar = ({ active, onNavigate }) => {
                     </button>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center space-x-10" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                    <div className="hidden lg:flex items-center space-x-10" style={{ fontFamily: 'Poppins, sans-serif' }}>
                         {navLinks.map((link) => (
                             <button
                                 key={link.id}
@@ -90,10 +83,10 @@ const Navbar = ({ active, onNavigate }) => {
                         </a>
                     </div>
 
-                    {/* Mobile Menu Toggle */}
+                    {/* Mobile & Tablet Menu Toggle */}
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className="md:hidden p-2 text-white hover:text-[green-400 ]focus:outline-none"
+                        className="lg:hidden p-2 text-white hover:text-green-400 focus:outline-none"
                         aria-label="Toggle menu"
                     >
                         <div className="w-6 h-6 flex flex-col justify-center items-center space-y-1">
@@ -110,8 +103,8 @@ const Navbar = ({ active, onNavigate }) => {
                     </button>
                 </div>
 
-                {/* Mobile Menu */}
-                <div className={`md:hidden transition-all duration-300 ${
+                {/* Mobile & Tablet Menu */}
+                <div className={`lg:hidden transition-all duration-300 ${
                     isMobileMenuOpen 
                         ? "max-h-screen opacity-100 mt-6" 
                         : "max-h-0 opacity-0 mt-0"
