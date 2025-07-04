@@ -29,7 +29,7 @@ const About = () => (
                         I’m always eager to learn new tools and frameworks, solve problems, and collaborate with others to deliver great digital experiences.
                     </p>
                 </div>
-                {/* Education */}
+                {/* Education
                 <div className="md:col-span-3 md:row-span-2 md:row-start-3 bg-[#18191A] rounded-xl p-6">
                     <h4 className="text-white font-semibold mb-4">Education</h4>
                     <div className="mb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center">
@@ -52,6 +52,18 @@ const About = () => (
                             <p className="text-gray-400 text-sm">North Maharashtra University • Jalgaon</p>
                         </div>
                         <span className="text-gray-400 text-xs sm:ml-4">June 2018 – Apr 2021</span>
+                    </div>
+                </div> */}
+                {/* Education */}
+                <div className="md:col-span-3 md:row-span-2 md:row-start-3 bg-[#18191A] rounded-xl p-6">
+                    <h4 className="text-white font-semibold mb-4">Education</h4>
+                    <div className="flex items-center">
+                        <img src="" alt="N/A" className="w-10 h-10 rounded-full mr-3" />
+                        <div>
+                            <p className="text-white font-bold">N/A</p>
+                            <p className="text-gray-400 text-sm">N/A</p>
+                            <p className="text-gray-400 text-xs">N/A</p>
+                        </div>
                     </div>
                 </div>
                 {/* Experience */}
