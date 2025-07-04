@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import CV from "../assets/DeLeon_CV.pdf"; // Adjust the path to your CV file
 
 const navLinks = [
     { id: "home", label: "Home" },
@@ -79,13 +80,14 @@ const Navbar = ({ active, onNavigate }) => {
                         ))}
                         
                         {/* Resume Button */}
-                        <button
-                        onClick={() => window.open('#', '_blank')}
-                        className="bg-[#1D1F1E] text-white px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl hover:bg-[#5AFF99]"
-                        style={{ fontFamily: 'Poppins, sans-serif' }}
+                        <a
+                            href={CV}
+                            download
+                            className="bg-[#1D1F1E] text-white px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl hover:bg-[#5AFF99]"
+                            style={{ fontFamily: 'Poppins, sans-serif' }}
                         >
-                        Resume
-                        </button>
+                            Resume
+                        </a>
                     </div>
 
                     {/* Mobile Menu Toggle */}
@@ -109,11 +111,11 @@ const Navbar = ({ active, onNavigate }) => {
                 </div>
 
                 {/* Mobile Menu */}
-                    <div className={`md:hidden transition-all duration-300 ${
-                        isMobileMenuOpen 
-                            ? "max-h-screen opacity-100 mt-6" 
-                            : "max-h-0 opacity-0 mt-0"
-                    } overflow-hidden overflow-y-auto`}>
+                <div className={`md:hidden transition-all duration-300 ${
+                    isMobileMenuOpen 
+                        ? "max-h-screen opacity-100 mt-6" 
+                        : "max-h-0 opacity-0 mt-0"
+                } overflow-hidden overflow-y-auto`}>
                     <div className="bg-gray-200/10 backdrop-blur-sm rounded-lg p-4 space-y-4">
                         {navLinks.map((link) => (
                             <button
@@ -130,12 +132,13 @@ const Navbar = ({ active, onNavigate }) => {
                         ))}
                         
                         {/* Mobile Resume Button */}
-                        <button
-                            onClick={() => window.open('#', '_blank')}
+                        <a
+                            href={CV}
+                            download
                             className="block w-full bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-white py-3 px-4 rounded-lg text-lg font-semibold transition-all duration-200 text-center"
                         >
                             Resume
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
