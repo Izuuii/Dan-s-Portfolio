@@ -11,7 +11,7 @@ import canva from "../assets/images/canva.png";
 import expressjs from "../assets/images/express-js.png"
 import firebase from "../assets/images/firebase.png"
 import mongoDB from "../assets/images/mongoDB.png"
-import nodeJS from "../assets/images/nodeJS.png";
+import nodeJS from "../assets/images/nodejs.png";
 import Beemo from "../assets/projImage/BeeMo.png";
 import BeemoLogo from "../assets/projImage/BeeMoLogo.png";
 import AIchatbot from "../assets/projImage/Ai-chatbot.png";
