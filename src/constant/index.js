@@ -11,7 +11,7 @@ import canva from "../assets/images/canva.png";
 import expressjs from "../assets/images/express-js.png"
 import firebase from "../assets/images/firebase.png"
 import mongoDB from "../assets/images/mongoDB.png"
-import NodeJS from "../assets/images/nodeJS.png";
+import nodeJS from "../assets/images/nodeJS.png";
 import Beemo from "../assets/projImage/BeeMo.png";
 import BeemoLogo from "../assets/projImage/BeeMoLogo.png";
 import AIchatbot from "../assets/projImage/Ai-chatbot.png";
@@ -33,7 +33,7 @@ export const techIcons = [
   { imgUrl: expressjs, alt: "ExpressJS" },
   { imgUrl: firebase, alt: "Firebase" },
   { imgUrl: mongoDB, alt: "MongoDB" },
-  { imgUrl: NodeJS, alt: "NodeJS" },
+  { imgUrl: nodeJS, alt: "NodeJS" },
 ];
 
 // ];
