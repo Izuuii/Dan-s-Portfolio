@@ -1,7 +1,6 @@
 // src/pages/Projects.jsx
 import { PROJECTS } from "../constant/index";
 import ProjectCard from "../components/ProjectCard";
-// Remove: import DesignsGlimpse from "../components/DesignsGlimpse";
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -31,17 +30,16 @@ const Projects = () => {
                     My Best Work
                 </motion.h1>
                 {PROJECTS.map((project, idx) => (
-                    <motion.div
+                    // Now ProjectCard itself is responsible for its animation
+                    // We pass the staggered delay as a prop
+                    <ProjectCard
                         key={idx}
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={inView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.6, delay: idx * 0.05 }}
-                    >
-                        <ProjectCard {...project} />
-                    </motion.div>
+                        {...project}
+                        animationDelay={idx * 0.05} // Pass the delay to the ProjectCard
+                    />
                 ))}
 
-                {/* Removed DesignsGlimpse component */}
+                {/* DesignsGlimpse is now a separate page/section */}
 
             </div>
         </div>

@@ -1,7 +1,8 @@
-// src/pages/DesignsGlimpse.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import CerticodeUi from '../assets/DesignsImage/CerticodeUI.png';
+import OnlyPans from '../assets/DesignsImage/OnlyPans.png';
 
 const DesignsGlimpse = () => {
     const [ref, inView] = useInView({
@@ -14,14 +15,19 @@ const DesignsGlimpse = () => {
         visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
     };
 
+    const containerVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.7 } }, // Delay for the main container
+    };
+
     return (
-        <div ref={ref} className="relative w-full min-h-screen bg-[#121212] py-16">
-            <div className="max-w-6xl mx-auto px-5 sm:px-6 md:px-10">
+        <div className="relative w-full min-h-screen bg-[#121212] py-16">
+            <div className="max-w-6xl mx-auto px-5 sm:px-6 md:px-10" ref={ref}>
                 <motion.h2
                     variants={itemVariants}
                     initial="hidden"
                     animate={inView ? "visible" : "hidden"}
-                    transition={{ delay: 0.2 }}
+                    transition={{ delay: 0.1 }}
                     className="text-center text-green-400 text-md font-bold mb-2 tracking-widest"
                 >
                     Designs
@@ -30,20 +36,43 @@ const DesignsGlimpse = () => {
                     variants={itemVariants}
                     initial="hidden"
                     animate={inView ? "visible" : "hidden"}
-                    transition={{ delay: 0.2 }}
-                    className="text-center text-4xl sm:text-5xl font-bold mb-6 text-white"
+                    transition={{ delay: 0.3 }}
+                    className="text-center text-4xl sm:text-5xl font-bold mb-10 text-white"
                 >
                     Glimpse of Designs
                 </motion.h1>
-                <motion.p
-                    variants={itemVariants}
+
+                <motion.div
+                    variants={containerVariants}
                     initial="hidden"
                     animate={inView ? "visible" : "hidden"}
-                    transition={{ delay: 0.5 }}
-                    className="text-center text-gray-400 text-lg mb-20"
+                    className=""
                 >
-                    🚧 This page is under construction. Stay tuned for updates!
-                </motion.p>
+
+                    <div className="w-full flex items-center justify-center">
+                        <img
+                            src={CerticodeUi}
+                            alt="Desktop Design Mockup"
+                            className="rounded-xl w-full h-auto object-contain shadow-lg mb-5"
+                        />
+                    </div>
+                </motion.div>
+
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate={inView ? "visible" : "hidden"}
+                    className=""
+                >
+                    <div className="w-full flex items-center justify-center">
+                        <img
+                            src={OnlyPans}
+                            alt="Desktop Design Mockup"
+                            className="rounded-xl w-full h-auto object-contain shadow-lg mb-5"
+                        />
+                    </div>
+                </motion.div>
+                
             </div>
         </div>
     );
