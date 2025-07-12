@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Info from "./pages/Info";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
+import DesignsGlimpse from "./pages/DesignsGlimpse"; // Import the new page component
 import Footer from "./components/Footer";
 // import Contact from "./pages/Contact";
 
@@ -11,6 +12,7 @@ const sectionsData = [
   { id: "home", label: "Home", content: <Home /> },
   { id: "info", label: "Info", content: <Info /> },
   { id: "projects", label: "Projects", content: <Projects /> },
+  { id: "designs", label: "Designs", content: <DesignsGlimpse /> }, // Add DesignsGlimpse as a new section
   { id: "about", label: "About", content: <About /> },
   // { id: "contact", label: "Contact", content: <Contact /> },
 ];
