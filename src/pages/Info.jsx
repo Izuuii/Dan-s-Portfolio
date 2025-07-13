@@ -1,12 +1,12 @@
 import React from "react";
 import star from "../assets/images/star.png";
 import { greetings } from "../constant";
-import { motion } from 'framer-motion'; // Import motion
-import { useInView } from 'react-intersection-observer'; // Import useInView
+import { motion } from 'framer-motion'; 
+import { useInView } from 'react-intersection-observer'; 
 
 const Info = () => {
-    const [ref, inView] = useInView({ // Hook to detect if component is in view
-        triggerOnce: true, // Only trigger animation once
+    const [ref, inView] = useInView({
+        triggerOnce: true, 
         threshold: 0.4,    
     });
 
@@ -56,9 +56,9 @@ const Info = () => {
             {/* ⬇ Text Content with animation */}
             <div className="flex flex-col items-center px-6 text-center" ref={ref}> {/* Attach ref to trigger animation */}
                 <motion.p
-                    variants={textVariants} // Apply variants
-                    initial="hidden"       // Set initial state
-                    animate={inView ? "visible" : "hidden"} // Animate when in view
+                    variants={textVariants} 
+                    initial="hidden"      
+                    animate={inView ? "visible" : "hidden"}
                     className="text-2xl sm:text-3xl md:text-4xl text-gray-400 max-w-3xl leading-relaxed py-20 md:py-50"
                 >
                     I'm all about keeping things <span className="text-[#5AFF99]">easy</span> and <span className="text-[#5AFF99]">user-friendly</span>!

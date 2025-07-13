@@ -12,7 +12,7 @@ const sectionsData = [
   { id: "home", label: "Home", content: <Home /> },
   { id: "info", label: "Info", content: <Info /> },
   { id: "projects", label: "Projects", content: <Projects /> },
-  { id: "designs", label: "Designs", content: <DesignsGlimpse /> }, // Add DesignsGlimpse as a new section
+  { id: "designs", label: "Designs", content: <DesignsGlimpse /> }, 
   { id: "about", label: "About", content: <About /> },
   // { id: "contact", label: "Contact", content: <Contact /> },
 ];
