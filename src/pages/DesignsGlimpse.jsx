@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import CerticodeUi from '../assets/DesignsImage/CerticodeUI.png';
 import OnlyPans from '../assets/DesignsImage/OnlyPans.png';
+import LegacyGlobal from '../assets/DesignsImage/legacyglobal.mp4';
 
 const DesignsGlimpse = () => {
     const [ref, inView] = useInView({
@@ -71,6 +72,36 @@ const DesignsGlimpse = () => {
                             className="rounded-xl w-full h-auto object-contain shadow-lg mb-5"
                         />
                     </div>
+                </motion.div>
+
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate={inView ? "visible" : "hidden"}
+                    className=""
+                >
+                    <div className="w-full flex items-center justify-center">
+                        <video
+                            src={LegacyGlobal}
+                            controls
+                            className="rounded-xl w-full h-auto object-contain shadow-lg mb-5"
+                            playsInline
+                        >
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </motion.div>
+
+                <motion.div
+                    variants={itemVariants}
+                    initial="hidden"
+                    animate={inView ? "visible" : "hidden"}
+                    transition={{ delay: 1.0 }}
+                    className="text-center mt-12"
+                >
+                    <p className="text-gray-400 text-lg italic">
+                        Under Construction
+                    </p>
                 </motion.div>
                 
             </div>

@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Info from "./pages/Info";
 import Projects from "./pages/Projects";
+import Commissions from "./pages/Commissions";
 import About from "./pages/About";
 import DesignsGlimpse from "./pages/DesignsGlimpse"; // Import the new page component
 import Footer from "./components/Footer";
@@ -12,6 +13,7 @@ const sectionsData = [
   { id: "home", label: "Home", content: <Home /> },
   { id: "info", label: "Info", content: <Info /> },
   { id: "projects", label: "Projects", content: <Projects /> },
+  { id: "commissions", label: "Commissions", content: <Commissions /> },
   { id: "designs", label: "Designs", content: <DesignsGlimpse /> }, 
   { id: "about", label: "About", content: <About /> },
   // { id: "contact", label: "Contact", content: <Contact /> },

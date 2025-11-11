@@ -21,6 +21,8 @@ import PitchLogo from "../assets/projImage/PitchLogo.png";
 import blogApp from "../assets/projImage/BlogApp.png";
 import Certicode from "../assets/projImage/Certicode.png";
 import certicodeLogo from "../assets/AboutImage/CerticodeLogo.png";
+import acadflowImg from "../assets/DesignsImage/acadflow.png";
+import appliloanImg from "../assets/DesignsImage/Appliloan.png";
 
 export const techIcons = [
   { imgUrl: bootstrap, alt: "Bootstrap" },
@@ -144,4 +146,37 @@ export const PROJECTS = [
     role: "Frontend Developer", // <-- added
   },
   // Add more project objects here as needed
+];
+
+export const COMMISSIONS = [
+  {
+    logo: "",
+    logoAlt: "AppliLoan Logo",
+    logoText: "AppliLoan",
+    title: "AppliLoan: A Web-Based Information Management System using Descriptive Analytics for Sariaya Multi-Purpose Cooperative General Merchandise/Appliances Center",
+    techStack: ["React", "Tailwind CSS", "Daisy UI", "Laravel", "MySQL", "Zustand"],
+    description:
+      "Designed and developed a web-based system that improves the service of the Sariaya Multi-Purpose Cooperative General Merchandise/Appliances Center and incorporates descriptive analytics capabilities, enabling the administrator to gain valuable insight from gathered data.",
+    image: appliloanImg,
+    imageAlt: "AppliLoan Screenshot",
+    buttonText: "View Website",
+    buttonLink: "https://appliloan.com",
+    buttonDisabled: false,
+    role: "Team Leader | Freelance Frontend Developer | Remote | July 2025 - Present",
+  },
+  {
+    logo: "",
+    logoAlt: "AcadFlow Logo",
+    logoText: "AcadFlow",
+    title: "AcadFlow: A Centralized Web-Based Platform for Academic Records Management and School Form Digitization for Castañas National High School",
+    techStack: ["React", "Tailwind CSS", "Laravel", "MySQL", "Zustand"],
+    description:
+      "Developed a centralized web-based portal that digitizes and modernize the preparation of DepEd School Forms (SF 1–SF 10), automates reporting and certificate generation, and provides secure access to academic records and school data for teachers, students, and parents.",
+    image: acadflowImg,
+    imageAlt: "AcadFlow Screenshot",
+    buttonText: "View Website",
+    buttonLink: "https://acad-flow.com",
+    buttonDisabled: false,
+    role: "Team Leader | Freelance Frontend Developer | Remote | July 2025 - Present",
+  },
 ];
