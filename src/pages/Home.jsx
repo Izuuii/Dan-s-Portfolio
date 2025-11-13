@@ -42,7 +42,7 @@ function Home() {
             style={{ fontFamily: "Poppins, sans-serif" }}
           >
             Hi, <span className="text-[#5AFF99] font-semibold">I'm Dan</span>, a{" "}
-            <span className="text-white">Web Developer/Web Designer</span> who's
+            <span className="text-white">Full Stack Developer/Frontend Developer</span> who's
             passionate about creating solutions, delightful user experiences &
             innovative interfaces.
           </motion.p>
