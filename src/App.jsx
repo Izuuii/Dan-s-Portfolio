@@ -9,7 +9,6 @@ import DesignsGlimpse from "./pages/DesignsGlimpse"; // Import the new page comp
 import Footer from "./components/Footer";
 // import Contact from "./pages/Contact";
 
-
 const sectionsData = [
   { id: "home", label: "Home", content: <Home /> },
   { id: "info", label: "Info", content: <Info /> },
